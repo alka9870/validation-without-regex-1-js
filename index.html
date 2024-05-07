@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function data(){
+        var a = document.getElementById("n1").value;
+        var b = document.getElementById("n2").value;
+        var c = document.getElementById("n3").value;
+        var d = document.getElementById("n4").value;
+
+        if(a==""||b==""||c==""||d==""){
+            alert("All field is mendatory");
+            return false;
+        }
+        else if(b.length<10||b.lenght>10){
+            alert("Number should be 10 digit! Please enter valid number");
+            return false;
+        }
+        else if (isNaN(b)){
+            alert("only numbers are allowed ! Please enter valid number");
+            return false;
+        }
+        else if(c!==d){
+            alert("Please enter same password");
+            return false;
+        }
+        else{
+            true;
+        }
+    }
+</script>
+<body>
+    <form onsubmit="return data()" action="abcd.html">
+        <input type="text" placeholder="Enter your Name" id="n1"/><br><br>
+        <input type="number" placeholder="Contact" id="n2"/><br><br>
+        <input type="password" placeholder="Password" id="n3"/><br><br>
+        <input type="password" placeholder="Match Password" id="n4"/><br><br>
+        <button>submit</button>
+    </form>
+</body>
+</html>
